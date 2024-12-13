@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/ga-pessoal/go-rest-api/database"
 	"github.com/ga-pessoal/go-rest-api/models"
 	"github.com/ga-pessoal/go-rest-api/routes"
 )
@@ -13,6 +14,7 @@ func main() {
 		{Id: 2, Nome: "Nome 2", Historia: "Historia 2"},
 	}
 
+	database.ConectaComBancoDeDados()
 	fmt.Println("Iniciando o servidor Rest com Go")
 	routes.HandleRequest()
 }
